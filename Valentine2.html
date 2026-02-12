@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EvilFX Valentine Loan</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:white;
+}
+
+.card{
+    background:white;
+    color:black;
+    padding:30px;
+    width:350px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+h2{
+    margin-bottom:5px;
+}
+
+small{
+    color:gray;
+}
+
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    background:#00b894;
+    border:none;
+    border-radius:6px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#019875;
+}
+
+.processing{
+    display:none;
+    margin-top:15px;
+    color:#0984e3;
+    font-weight:bold;
+}
+
+.savage{
+    display:none;
+    margin-top:15px;
+    color:red;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>EvilFX Microfinance</h2>
+    <small>Valentine Special Loan ❤️</small>
+
+    <form id="loanForm">
+        <input type="text" placeholder="Full Name" required>
+        <input type="number" placeholder="Amount Needed (₦)" required>
+        <textarea placeholder="Reason for Loan" required></textarea>
+        <input type="number" placeholder="Account Number" required>
+        <button type="submit">Apply Now</button>
+    </form>
+
+    <div class="processing" id="processing">
+        Processing your loan application... ⏳
+    </div>
+
+    <div class="savage" id="savage">
+        😂 So you wan borrow money to surprise your babe?  
+        Na me EvilFX wan come borrow you?  
+        My dear go hustle first 😭💀
+    </div>
+</div>
+
+<script>
+document.getElementById("loanForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    document.getElementById("processing").style.display="block";
+
+    setTimeout(function(){
+        document.getElementById("processing").style.display="none";
+        document.getElementById("savage").style.display="block";
+    }, 3000);
+});
+</script>
+
+</body>
+</html>
